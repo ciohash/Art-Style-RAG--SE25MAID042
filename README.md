@@ -209,6 +209,7 @@ The 1k subset is **heavily skewed**: Impressionism (276 samples) and Realism (21
 
 - [x] **Milestone 1** — Data pipeline, CLIP ViT-B/32 index, text-to-image retrieval, ablation study
 - [ ] **Final Milestone** — Fine-tune CLIP on WikiArt labels, weighted sampling for class balance, LLM-generated grounded explanations, ViT-B/32 vs ViT-L/14 comparison
+<img width="1440" height="1736" alt="image" src="https://github.com/user-attachments/assets/a6ae29dd-967c-4499-ade3-6d2164453b8b" />
 
 ---
 
