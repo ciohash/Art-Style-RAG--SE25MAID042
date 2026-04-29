@@ -1,0 +1,43 @@
+import os
+from datasets import load_dataset
+from tqdm import tqdm
+
+# Output directory
+SAVE_DIR = "data/wikiart"
+
+def main():
+    os.makedirs(SAVE_DIR, exist_ok=True)
+
+    print("Downloading WikiArt dataset from HuggingFace...")
+    
+    # Load dataset
+    dataset = load_dataset("huggan/wikiart", split="train")
+
+    print(f"Total samples: {len(dataset)}")
+
+    # Save images + metadata
+    for i, sample in enumerate(tqdm(dataset)):
+        image = sample["image"]
+        artist = sample.get("artist", "unknown")
+        style = sample.get("style", "unknown")
+        genre = sample.get("genre", "unknown")
+
+        # Create folder by style
+        style_dir = os.path.join(SAVE_DIR, style.replace(" ", "_"))
+        os.makedirs(style_dir, exist_ok=True)
+
+        # Save image
+        image_path = os.path.join(style_dir, f"{i}.jpg")
+        image.save(image_path)
+
+        # Save metadata (optional)
+        meta_path = os.path.join(style_dir, f"{i}.txt")
+        with open(meta_path, "w", encoding="utf-8") as f:
+            f.write(f"artist: {artist}\n")
+            f.write(f"style: {style}\n")
+            f.write(f"genre: {genre}\n")
+
+    print("Download complete!")
+
+if __name__ == "__main__":
+    main()
