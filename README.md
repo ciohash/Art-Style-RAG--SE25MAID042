@@ -2,11 +2,11 @@
 A user uploads or describes a painting style (e.g., "impressionist, warm, outdoors") and the system retrieves visually and thematically similar artworks with context about the artist and movement.
 
 > Team Members:
-> G sai santhosh - SE25MAID018
-> Ashwin Naidu   - SE25MAID042
-> N Pranav       - SE25MAID005
-> A Karun        - SE25MAID013
-> K Indra Neel   - SE25MAID038
+> 1.G sai santhosh - SE25MAID018
+> 2.Ashwin Naidu   - SE25MAID042
+> 3.N Pranav       - SE25MAID005
+> 4.A Karun        - SE25MAID013
+> 5.K Indra Neel   - SE25MAID038
 
 > **Milestone 1 · Preliminary Model**  
 > Retrieve paintings from WikiArt by natural-language aesthetic descriptions using CLIP-ViT-B/32.
